@@ -11,7 +11,7 @@ This implementation focuses on modeling the game using Python and solving it usi
 - The Mancala board has **6 pits per player** and **one store per player**.
 - Each pit initially contains **4 seeds**.
 - The players sit opposite each other, and each player's store is on their **right**.
-- The game begins with the board arranged as shown in the figure (refer to the PDF).
+- The game begins with the board arranged in such a way that each pit has 4 seeds.
 
 ## Objective
 
