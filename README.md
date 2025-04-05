@@ -13,10 +13,10 @@ pip install pygame
 3️⃣ Run the game:  
 - For **AI vs AI**:  
   ```bash  
-  python aiVSai/main.py  
+  python AIvsAI/main.py  
   ```  
 - For **Human vs AI**:  
   ```bash  
-  python aiVsHuman/main.py  
+  python AIvsHUMAN/main.py  
   ```  
 
