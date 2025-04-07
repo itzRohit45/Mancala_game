@@ -232,15 +232,6 @@ def ai_vs_ai():
     print_winner(j, 3)
 
 
-# def print_winner(j):
-#     if j.mancala[13] > j.mancala[6]:
-#         print("PLAYER 1 / AI-BOT 1 WINS")
-#     elif j.mancala[13] < j.mancala[6]:
-#         print("PLAYER 2 / AI-BOT 2 WINS")
-#     else:
-#         print("IT'S A DRAW")
-#     print("GAME ENDED")
-#     j.print_mancala()
 def print_winner(j, mode):
     if j.mancala[13] > j.mancala[6]:
         if mode == 1:
