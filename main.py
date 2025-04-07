@@ -164,7 +164,7 @@ def player_player():
             j.print_mancala()
             if not t:
                 break
-    print_winner(j)
+    print_winner(j, 1)
 
 
 def player_aibot():
@@ -194,7 +194,7 @@ def player_aibot():
             j.print_mancala()
             if not t:
                 break
-    print_winner(j)
+    print_winner(j, 2)
 
 
 def ai_vs_ai():
@@ -229,16 +229,35 @@ def ai_vs_ai():
             j.print_mancala()
             if not t:
                 break
-    print_winner(j)
+    print_winner(j, 3)
 
 
-def print_winner(j):
+# def print_winner(j):
+#     if j.mancala[13] > j.mancala[6]:
+#         print("PLAYER 1 / AI-BOT 1 WINS")
+#     elif j.mancala[13] < j.mancala[6]:
+#         print("PLAYER 2 / AI-BOT 2 WINS")
+#     else:
+#         print("IT'S A DRAW")
+#     print("GAME ENDED")
+#     j.print_mancala()
+def print_winner(j, mode):
     if j.mancala[13] > j.mancala[6]:
-        print("PLAYER 1 / AI-BOT 1 WINS")
+        if mode == 1:
+            print("PLAYER 1 WINS!")
+        elif mode == 2:
+            print("AI-BOT WINS!")
+        elif mode == 3:
+            print("AI-BOT 1 WINS!")
     elif j.mancala[13] < j.mancala[6]:
-        print("PLAYER 2 / AI-BOT 2 WINS")
+        if mode == 1:
+            print("PLAYER 2 WINS!")
+        elif mode == 2:
+            print("YOU WIN!")
+        elif mode == 3:
+            print("AI-BOT 2 WINS!")
     else:
-        print("IT'S A DRAW")
+        print("IT'S A DRAW!")
     print("GAME ENDED")
     j.print_mancala()
 
