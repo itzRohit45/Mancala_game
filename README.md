@@ -62,7 +62,7 @@ Collect **more seeds** in your store than your opponent by the end of the game.
 
 ---
 
-## 🧠 AI Implementation Details
+## 🧠 Implementation Details
 
 ### 🔍 Minimax Algorithm
 
