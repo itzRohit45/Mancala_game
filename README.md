@@ -6,6 +6,27 @@ This project implements the classic **Mancala** game, also known as **Awalé**, 
 
 This implementation focuses on modeling the game using Python and solving it using the **Minimax algorithm with Alpha-Beta pruning**.
 
+![Mancala Board Example](https://i.pinimg.com/originals/e7/23/07/e72307019ac8c6bf2501877bfb28bafc.gif)  
+<br>  
+
+---
+
+## **📌 About**  
+
+**Mancala** is an ancient strategy game where players capture the most seeds 🌱. 
+This project implements a smart AI opponent using **Minimax algorithm with Alpha-Beta pruning** to outplay you 🤯.
+
+![explain the game](https://i.pinimg.com/736x/07/f5/66/07f56656594d41042b81aba3d432e15c.jpg)
+---
+
+## **🧩 Features**  
+- ✅ **Minimax Algorithm**: Implements adversarial search to determine the best moves.  
+- ✅ **Alpha-Beta Pruning**: Optimizes the search by reducing unnecessary computations.  
+- ✅ **Two Game Modes**:  
+  - **AI vs AI**: Watch two AI opponents compete.  
+  - **Human vs AI**: Play against the AI.  
+- ✅ **Interactive Gameplay**: Provides a clear interface for both modes.  
+
 ## Game Setup
 
 - The Mancala board has **6 pits per player** and **one store per player**.
