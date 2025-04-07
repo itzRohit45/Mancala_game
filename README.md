@@ -30,25 +30,3 @@ The goal is to collect **more seeds** in your store than your opponent by the en
 6. The opponent collects all remaining seeds into their store.
 7. The winner is the player with the **most seeds in their store**.
 
----
-## **📦 Installation**  
-1️⃣ Clone the repository:  
-```bash  
-git clone https://github.com/itzRohit45/Mancala_game.git  
-```  
-
-2️⃣ Install dependencies:  
-```bash  
-pip install pygame  
-```  
-
-3️⃣ Run the game:  
-- For **AI vs AI**:  
-  ```bash  
-  python AIvsAI/main.py  
-  ```  
-- For **Human vs AI**:  
-  ```bash  
-  python AIvsHUMAN/main.py  
-  ```  
-
