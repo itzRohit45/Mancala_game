@@ -82,14 +82,23 @@ Collect **more seeds** in your store than your opponent by the end of the game.
 
 Used to evaluate the board when the maximum search depth is reached or the game ends.
 
-### Factors considered:
+### 📊 Factors considered:
 - **Store Difference**: Player 1's store - Player 2's store  
 - **Seeds in Pits**: (Player 1 pits total - Player 2 pits total) × 0.5  
 
 ### 🎲 Example Calculation:
 
+- **Player 1's store**: `20`  
+- **Player 2's store**: `15`  
+- **Player 1 pits**: `[3, 2, 1, 4, 5, 6]` → Total = `21`  
+- **Player 2 pits**: `[2, 3, 4, 1, 0, 2]` → Total = `12`  
 
-A **positive value** indicates a favorable state for Player 1.
+**Heuristic value**:
+(20 - 15) + (21 - 12) × 0.5 = 5 + 9 × 0.5 = 5 + 4.5 = 9.5
+
+
+👉 A **positive value** indicates a favorable position for **Player 1**,  
+👉 A **negative value** indicates an advantage for **Player 2**.
 
 ---
 
@@ -102,19 +111,17 @@ A **positive value** indicates a favorable state for Player 1.
 
 ## 🆚 AI vs AI Mode
 
-- AI-BOT 1 and AI-BOT 2 compete.
-- AI-BOT 2 introduces a 10% chance of making a random valid move to add unpredictability.
-
+- **AI-BOT 1** and **AI-BOT 2** compete with each other.
+- **AI-BOT 2** introduces a 10% chance of making a **random valid move** to add unpredictability.
 
 ---
 
 ## 📊 Performance Highlights
 
-- **Alpha-Beta Pruning** reduces the number of nodes evaluated drastically.
-- The **heuristic function** ensures smarter decisions:
-  - Prioritizes **store seeds**
-  - Favors **capturing opportunities**
-  - Considers pit balance for long-term gain.
+- **Alpha-Beta Pruning** significantly reduces the number of nodes evaluated.
+- The **heuristic function** ensures the AI makes smart decisions, focusing on:
+  - Maximizing store seeds
+  - Capturing opportunities
+  - Avoiding vulnerable positions
 
 ---
-
