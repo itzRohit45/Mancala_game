@@ -95,16 +95,16 @@ A **positive value** indicates a favorable state for Player 1.
 
 ## ⏳ Minimax Depth
 
-- **AI-BOT 1**: Depth = 6  
-- **AI-BOT 2**: Depth = 8 with **10% chance** of making a random valid move for unpredictability.
+- The depth determines how many moves ahead the AI evaluates. 
+- A higher depth results in better decision-making but increases computation time.
 
 ---
 
 ## 🆚 AI vs AI Mode
 
 - AI-BOT 1 and AI-BOT 2 compete.
-- AI-BOT 2 adds randomness for realism.
-- Great mode to observe the effectiveness of Minimax + Alpha-Beta pruning.
+- AI-BOT 2 introduces a 10% chance of making a random valid move to add unpredictability.
+
 
 ---
 
