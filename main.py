@@ -1,5 +1,9 @@
 import random
 
+# import time
+import time
+import matplotlib.pyplot as plt
+
 
 class Mancala_Board:
     def __init__(self, mancala):
@@ -278,3 +282,74 @@ while True:
             print("Invalid choice. Try again.")
     except ValueError:
         print("Enter a valid number.")
+
+
+def minimax(mancala, depth, isMaximizingPlayer):
+    if depth == 0 or mancala.isEnd():
+        return mancala.husVal(), -1
+    if isMaximizingPlayer:
+        v = -1000000
+        player_move = -1
+        for i in range(7, 13):  # Player 1 pits
+            if mancala.mancala[i] == 0:
+                continue
+            a = Mancala_Board(mancala.mancala[:])
+            repeat_turn = a.player_move(i)
+            newv, _ = minimax(a, depth - 1, repeat_turn)
+            if v < newv:
+                player_move = i
+                v = newv
+        return v, player_move
+    else:
+        v = 1000000
+        player_move = -1
+        for i in range(0, 6):  # Player 2 pits
+            if mancala.mancala[i] == 0:
+                continue
+            a = Mancala_Board(mancala.mancala[:])
+            repeat_turn = a.player_move(i)
+            newv, _ = minimax(a, depth - 1, not repeat_turn)
+            if v > newv:
+                player_move = i
+                v = newv
+        return v, player_move
+
+
+def performance_comparison():
+    # Initialize a sample board state
+    j = Mancala_Board(None)
+
+    # Depths to test
+    depths = [2, 4, 6, 8]
+
+    # Lists to store execution times
+    minimax_times = []
+    alphabeta_times = []
+
+    for depth in depths:
+        # Measure time for Minimax
+        start_time = time.time()
+        _, _ = minimax(j, depth, True)
+        end_time = time.time()
+        minimax_times.append(end_time - start_time)
+
+        # Measure time for Alpha-Beta Pruning
+        start_time = time.time()
+        _, _ = alphabeta(j, depth, -100000, 100000, True)
+        end_time = time.time()
+        alphabeta_times.append(end_time - start_time)
+
+    # Plot the results
+    plt.figure(figsize=(10, 6))
+    plt.plot(depths, minimax_times, label="Minimax", marker="o")
+    plt.plot(depths, alphabeta_times, label="Alpha-Beta Pruning", marker="o")
+    plt.title("Performance Comparison: Minimax vs Alpha-Beta Pruning")
+    plt.xlabel("Depth")
+    plt.ylabel("Execution Time (seconds)")
+    plt.legend()
+    plt.grid()
+    plt.savefig("performance_comparison.png")
+    plt.show()
+
+
+performance_comparison()
